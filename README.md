@@ -9,6 +9,11 @@ Existirá una página para cada año (siendo 2020 el primero) y, dentro de la p�
 También incluirá a los colaboradores de este proyecto (incluidos los colaboradoes SAPREPA)
 
 ---
+## Estructura de los datos
+La estructura de datos está disponible [aquí](https://github.com/Ctrl-Alt-Tec/Anuario/wiki/Estructura-de-los-Datos). 
+- [ ] Crear estructura de datos dummy para poder integrar con front-end
+
+---
 ## Checklist
 
 - [ ] Crear index

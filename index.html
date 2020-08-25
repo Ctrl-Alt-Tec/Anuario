@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" 
+         content="default-src *; 
+                  style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+                  script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuario Prepa Tec - Ago-Dic 2020</title>
+    <link rel="stylesheet" href="style.css">
+    <meta content="./img/Tec-de-Monterrey-Logo.jpg" itemprop="image" /> <!--- Favicon en inicio --->
+    <link rel="icon" type="image/png" href="./img/Tec-de-Monterrey-Logo.jpg" /> <!--- Favicon en general --->
+    <script src="./index.js"></script>
+    <noscript><h1>Tu navegador no soporta JavScript</h1></noscript>
+</head>
+<body>
+	<image	src="./img/tecnologico-de-monterrey-blue.png" style="height: 5rem"/>
+	<nav >
+        <a style="text-align: center;"> Generación Agosto- Diciembre 2020</a><!--Yo se que esta mal usado pero se veia feo con otro tag -->
+
+    </nav>
+    <div id="images">
+    	
+	</div>
+	<script>
+		
+		function imgLoad(){
+			for(let i=0;i<50;i++){
+				document.getElementById("images").innerHTML += `<div id="innerImage"><image style="size: 50%;" src="./gifs/pruebaImagen.png" type="image"/><h6>PBB</h6><h3>Nombre Prueba</h3><h5>Frase de prueba</h5></div>`
+			}
+		}
+		imgLoad()
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    
+    background-size: 20px
+}
+p{
+    font-size: 1.5rem;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0.5rem 0rem;
+}
+blockquote{
+    font-family: 'Homemade Apple', cursive;
+    font-color: #e6e6e6;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    background-color: #0000FF;
+    color: #8f368f;
+    padding: 16px;
+    box-sizing: border-box;
+    color: white;
+    position: sticky;
+    top: 0; 
+}
+nav a{
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+section{
+    max-width: 800px;
+    margin: 0px auto;
+    height: auto;
+    overflow: hidden;
+    padding: 16px;
+}
+
+section>*{
+    flex-wrap: wrap;
+}
+
+#images{
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 30px; 
+    display: flex; 
+    flex-wrap: wrap
+}
+

@@ -7,6 +7,12 @@ body{
 
     background-size: 20px
 }
+
+.anuario-intab{
+    position: sticky;
+    top: 0;
+}
+
 p{
     font-size: 1.5rem;
 }

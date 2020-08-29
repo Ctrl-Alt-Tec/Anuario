@@ -75,6 +75,14 @@ section>*{
     background-attachment: fixed;
 }
 
+.anuario-intab{
+    background: #0433A2;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .altBlogCard{
     max-width: 400px;
     width: 100%;

@@ -81,6 +81,10 @@ section>*{
     background-attachment: fixed;
 }
 
+.anuario-outtab{
+    display: flex; justify-content: space-between; align-items: center; padding: 1rem; height: 3rem
+}
+
 .anuario-intab{
     background: #0433A2;
     background-size: cover;
@@ -101,4 +105,13 @@ section>*{
     justify-content: center;
     text-decoration: none;
     color: inherit;
+}
+
+@media only screen and (max-width: 900px){
+    .anuario-outtab *{
+        display: none;
+    }
+    .anuario-outtab #logo{
+        display: block;
+    }
 }

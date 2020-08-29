@@ -1,3 +1,4 @@
+
 body{
     margin: 0;
     padding: 0; 
@@ -10,17 +11,21 @@ p{
     font-size: 1.5rem;
 }
 h1{
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 800;
     margin: 0.5rem 0rem;
 }
-blockquote{
-    font-family: 'Homemade Apple', cursive;
-    font-color: #e6e6e6;
-    font-size: 2rem;
-    line-height: 1.5;
-    font-weight: bold;
+h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0rem;
 }
+h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0rem;
+}
+
 nav{
     display: flex;
     background-color: #0000FF;
@@ -50,6 +55,10 @@ section>*{
     flex-wrap: wrap;
 }
 
+#bar{
+    background-color: #081534;
+}
+
 #images{
     text-align: center;
     margin-left: 20px;
@@ -58,3 +67,10 @@ section>*{
     flex-wrap: wrap
 }
 
+#projects-container{
+    background: #0000FF;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-position: center;
+    background-attachment: fixed;
+}

@@ -4,7 +4,7 @@ body{
     padding: 0; 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-    
+    max-width: 100%;
     background-size: 20px
 }
 p{
@@ -67,8 +67,8 @@ section>*{
     flex-wrap: wrap
 }
 
-#projects-container{
-    background: #0000FF;
+#anuario-container{
+    background: #0433A2;
     background-size: cover;
     background-blend-mode: lighten;
     background-position: center;

@@ -124,6 +124,7 @@ div.genCard{
     flex-wrap: wrap;
     text-decoration: none;
     color: inherit;
+    transition: transform 0.2s;
 }
 
 div.genCard:hover{
@@ -146,12 +147,14 @@ div.buttons{
     flex-wrap: wrap;
     text-decoration: none;
     color: inherit;
+    transition: transform 0.2s;
 }
 
 div.buttons:hover{
     cursor: pointer;
     color: #0000ff;
     transform: scale(1.5);
+    transition: transform 0.4s;
 }
 
 @media only screen and (max-width: 900px){

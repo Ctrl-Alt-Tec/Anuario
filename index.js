@@ -32,15 +32,19 @@ async function studentBuilder(gen){//main function
 
 window.onscroll = function(){menuScroll()}
 function menuScroll(){
-	if(document.body.scrollTop > 80 || document.documentElement.scrollTop >80){
-		document.getElementById("padd").style.padding = "10px"
+	if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 10){
+		document.getElementById("padd").style.padding = "0.1rem"
+		document.getElementById("paddh").style.fontSize = "1.5rem"
+		document.getElementById("paddh").innerHTML = ""
 	}else{
-		document.getElementById("padd").style.padding = "16px"
+		document.getElementById("padd").style.padding = "3rem"
+		document.getElementById("paddh").style.fontSize = "3rem"
+		document.getElementById("paddh").innerHTML = "Anuario Prepa Tec"
 	}
 }
 
 document.getElementById("PBB").addEventListener('click', ()=>{
-	
+
 })
 
 document.getElementById("PBB").addEventListener('click', ()=>{

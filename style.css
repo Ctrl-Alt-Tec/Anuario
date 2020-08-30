@@ -95,6 +95,22 @@ section>*{
     z-index: 999;
 }
 
+section.padd{
+    max-width: 800px;
+    margin: 0px auto;
+    height: auto;
+    overflow: hidden;
+    padding: 6rem;
+    transition: 0.4s;
+}
+
+h3.padd{
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0.5rem 0rem;
+    transition: 0.4s;
+}
+
 .altBlogCard{
     max-width: 400px;
     width: 100%;

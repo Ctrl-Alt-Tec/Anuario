@@ -29,9 +29,9 @@ async function studentBuilder(gen){//main function
 	var allStudents = await fetchy(gen)
 	allStudents.forEach((element)=>{
 		document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
-                <div class="genCard" >
+                <div class="genCard" style="height: 370px;">
                     <image width="180px" height="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
-                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1.2rem;">${element.nombrecompleto}</h3><br/>
+                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1.2rem;">${element.nombrecompleto}</h3>
                     <h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.7rem;">"${element.frase}"</h4>
                 </div>
             </a>`

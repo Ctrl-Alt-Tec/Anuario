@@ -124,7 +124,7 @@ div.genCard{
     flex-wrap: wrap;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s;
+    transition: transform 0.4s;
 }
 
 div.genCard:hover{

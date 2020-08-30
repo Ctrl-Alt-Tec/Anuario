@@ -77,7 +77,11 @@ section>*{
 }
 
 .anuario-outtab{
-    display: flex; justify-content: space-between; align-items: center; padding: 1rem; height: 3rem
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem; 
+    height: 3rem
 }
 
 .anuario-intab{
@@ -88,6 +92,7 @@ section>*{
     background-attachment: fixed;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .altBlogCard{

@@ -1,22 +1,4 @@
 
-
-/*
-class student{
-	constructor(stu){
-		this.timestamp = stu.timestamp;
-		this.matricula = stu.matricula;
-		this.nombrecompleto = stu.nombrecompleto;
-		this.frase = stu.frase;
-		this.foto = stu.foto;
-		this.mail = stu.mail;
-		this.semestre = stu.semestre;
-		this.programa = stu.programa;
-		this.acuerdo = stu.acuerdo;
-		this.gruposestudiantiles = stu.gruposestudiantiles;
-		this.fotoURL = stu.fotoURL;
-	}
-}*/
-
 async function fetchy(gen){
 	
 	var URL = 'https://cors-anywhere.herokuapp.com/ctrl-alt-tec.herokuapp.com/colab/saprepa/anuario/'+gen;

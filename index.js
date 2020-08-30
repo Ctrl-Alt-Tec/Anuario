@@ -1,5 +1,5 @@
 
-window.storage
+
 /*
 class student{
 	constructor(stu){
@@ -19,7 +19,7 @@ class student{
 
 async function fetchy(gen){
 	
-	var URL = 'http://ctrl-alt-tec.herokuapp.com/colab/saprepa/anuario/'+gen;
+	var URL = 'https://cors-anywhere.herokuapp.com/ctrl-alt-tec.herokuapp.com/colab/saprepa/anuario/'+gen;
 	let raw = await fetch(URL);
 	let data = await raw.json();
 	return data

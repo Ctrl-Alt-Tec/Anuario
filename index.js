@@ -31,7 +31,7 @@ async function studentBuilder(gen){//main function
 		if(element.frase.indexOf('"')>=0){
 			var fras = `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.7rem;">${element.frase}</h4>`
 		}else{
-			var fras = `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.7rem;">"${element.frase}"</h4>`
+			var fras = `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.8rem;">"${element.frase}"</h4>`
 		}
 		document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
                 <div class="genCard" style="height: 370px;">

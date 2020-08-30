@@ -49,5 +49,17 @@ async function studentBuilder(gen){//main function
 }
 
 document.getElementById("PBB").addEventListener('click', ()=>{
-	document.getElementById("TEST").innerHTML = "gracias lalo xdxd"
+	
+})
+
+document.getElementById("PBB").addEventListener('click', ()=>{
+	
+})
+
+document.getElementById("PBB").addEventListener('click', ()=>{
+	
+})
+
+document.getElementById("PBB").addEventListener('click', ()=>{
+	
 })

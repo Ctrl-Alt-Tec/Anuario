@@ -109,6 +109,7 @@ div.genCard{
     max-height: 500px;
     width: 100%;
     padding: 1rem;
+    background: white;
     border: 0.15rem solid rgb(200,200,200);
     margin: 0.5rem;
     border-radius: 1rem;
@@ -118,6 +119,10 @@ div.genCard{
     flex-wrap: wrap;
     text-decoration: none;
     color: inherit;
+}
+
+div.genCard:hover{
+    transform: scale(1.5);
 }
 
 
@@ -137,7 +142,7 @@ div.buttons{
     color: inherit;
 }
 
-div.buttons :hover{
+div.buttons:hover{
     cursor: pointer;
     color: #0000ff;
     transform: scale(1.5);

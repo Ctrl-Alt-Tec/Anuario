@@ -8,11 +8,6 @@ body{
     background-size: 20px
 }
 
-.anuario-intab{
-    position: sticky;
-    top: 0;
-}
-
 p{
     font-size: 1.5rem;
 }
@@ -91,6 +86,8 @@ section>*{
     background-blend-mode: lighten;
     background-position: center;
     background-attachment: fixed;
+    position: sticky;
+    top: 0;
 }
 
 .altBlogCard{
@@ -106,6 +103,22 @@ section>*{
     text-decoration: none;
     color: inherit;
 }
+
+div.genCard{
+    max-width: 200px;
+    max-height: 300px;
+    width: 100%;
+    padding: 1rem;
+    border: 0.15rem solid rgb(200,200,200);
+    margin: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: inherit;
+}
+
 
 @media only screen and (max-width: 900px){
     .anuario-outtab *{

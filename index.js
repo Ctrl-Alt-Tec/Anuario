@@ -1,4 +1,6 @@
+
 window.storage
+/*
 class student{
 	constructor(stu){
 		this.timestamp = stu.timestamp;
@@ -13,17 +15,26 @@ class student{
 		this.gruposestudiantiles = stu.gruposestudiantiles;
 		this.fotoURL = stu.fotoURL;
 	}
-}
+}*/
 
 async function fetchy(gen){
-	var URL = 'http://ctrl-alt-tec.herokuapp.com/colab/saprepa/anuario'+gen;
+	
+	var URL = 'http://ctrl-alt-tec.herokuapp.com/colab/saprepa/anuario/'+gen;
 	let raw = await fetch(URL);
-	return raw
+	let data = await raw.json();
+	return data
 }
 
 async function studentBuilder(gen){//main function
-	if(sessionStorage.getItem('allStudents')==null){
-		sessionStorage.setItem('allStudents',await fetchy(gen))
-	}
-	var allStudents = new student(JSON.parse(sessionStorage.getItem('allStudents')))
+	var allStudents = await fetchy(gen)
+	allStudents.forEach((element)=>{
+		document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
+                <div class="genCard" >
+                    <image width="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
+                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 1rem;">${element.nombrecompleto}</h3>
+                    <h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 0.7rem;">${element.frase}</h4>
+                </div>
+            </a>`
+	})
 }
+

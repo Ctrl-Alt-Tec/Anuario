@@ -36,10 +36,14 @@ function menuScroll(){
 		document.getElementById("padd").style.padding = "0.1rem"
 		document.getElementById("paddh").style.fontSize = "1.5rem"
 		document.getElementById("paddh").innerHTML = ""
+		document.getElementById("arrow").style.marginTop = "0.5rem"
+		document.getElementById("arrow").style.height = "50%"
 	}else{
 		document.getElementById("padd").style.padding = "3rem"
 		document.getElementById("paddh").style.fontSize = "3rem"
 		document.getElementById("paddh").innerHTML = "Anuario Prepa Tec"
+		document.getElementById("arrow").style.marginTop = "3.5rem"
+		document.getElementById("arrow").style.height = "6rem"
 	}
 }
 

@@ -30,9 +30,9 @@ async function studentBuilder(gen){//main function
 	allStudents.forEach((element)=>{
 		document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
                 <div class="genCard" >
-                    <image width="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
-                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 1rem;">${element.nombrecompleto}</h3>
-                    <h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 0.7rem;">${element.frase}</h4>
+                    <image width="180px" height="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
+                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 0.5rem;">${element.nombrecompleto}</h3>
+                    <h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; size: 0.2rem;">${element.frase}</h4>
                 </div>
             </a>`
 	})

@@ -106,7 +106,7 @@ section>*{
 
 div.genCard{
     max-width: 200px;
-    max-height: 300px;
+    max-height: 500px;
     width: 100%;
     padding: 1rem;
     border: 0.15rem solid rgb(200,200,200);
@@ -114,6 +114,7 @@ div.genCard{
     border-radius: 1rem;
     display: flex;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     text-decoration: none;
     color: inherit;

@@ -30,6 +30,15 @@ async function studentBuilder(gen){//main function
 	})
 }
 
+window.onscroll = function(){menuScroll()}
+function menuScroll(){
+	if(document.body.scrollTop > 80 || document.documentElement.scrollTop >80){
+		document.getElementById("padd").style.padding = "10px"
+	}else{
+		document.getElementById("padd").style.padding = "16px"
+	}
+}
+
 document.getElementById("PBB").addEventListener('click', ()=>{
 	
 })

@@ -1,3 +1,4 @@
+//-------------Main------------------
 
 async function fetchy(gen){
 	
@@ -30,6 +31,8 @@ async function studentBuilder(gen){//main function
 	})
 }
 
+
+//-----------------------top bar animation------------------------
 window.onscroll = function(){menuScroll()}
 function menuScroll(){
 	if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 10){
@@ -62,3 +65,5 @@ document.getElementById("PBB").addEventListener('click', ()=>{
 document.getElementById("PBB").addEventListener('click', ()=>{
 	
 })
+
+//---------------------------search engine -----------------------

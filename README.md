@@ -16,11 +16,11 @@ La estructura de datos está disponible [aquí](https://github.com/Ctrl-Alt-Tec/
 ---
 ## Checklist
 
-- [ ] Crear index
-    - [ ] Darle estilo (CSS)
-- [ ] Añadir favicon
+- [x] Crear index
+    - [x] Darle estilo (CSS)
+- [x] Añadir favicon
 - [ ] Crear drive para contener los gifs y jsons de las personas (en caso de poder usar el API de G Suite)
-- [ ] Crear página de ago-dic 2020
+- [x] Crear página de ago-dic 2020
     - [ ] Añadir filtro para PBB
     - [ ] Añadir filtro para PTM
     - [ ] Añadir filtro para PBI

@@ -20,7 +20,7 @@
     </style>
 </head>
 <body>
-	<div class="anuario-outtab">
+	<div class="anuario-outtab" id="TOP">
         <image  src="./img/tecnologico-de-monterrey-blue.png" id="logo" style="height: 3rem;"/>
 
         <image  type="image/png" src="./img/prepaTecLogo.png" style="height: 6rem;"/>
@@ -45,7 +45,7 @@
         
     </div>
 
-    <div id="images"></div>
+    <div id="images" style="justify-content: center"></div>
 
     <footer style="font-size: 1rem; color: rgb(100, 100, 100); text-align: center;">
         <p>
@@ -68,9 +68,10 @@
 			}
 		}
         imgLoad()*/
-        allStudents("Ago2020")
-        studentBuilder()
+        studentBuilder("ago2020")
 	</script>
+    <footer class="footer" id='footer'>
+    </footer>
 </body>
 
 </html>

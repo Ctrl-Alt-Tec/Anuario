@@ -1,3 +1,33 @@
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+footer.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #081534;
+    z-index: 9998;
+    font-size: 20px;
+    font-color: white;
+    transition: 0.4s;
+}
+
+div.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 27px;
+}
+
+p.footer{
+    text-align: inherit; 
+    font-size: inherit; 
+    color: white; 
+    text-align: left; 
+    margin-left: 20px;
+}
 
 body{
     margin: 0;

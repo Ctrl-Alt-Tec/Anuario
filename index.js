@@ -1,3 +1,6 @@
+//-------------Variables Globales------------------
+const allStudents = async function (gen){return await fetchy (gen)};
+
 //-------------Main------------------
 
 async function fetchy(gen){
@@ -8,8 +11,8 @@ async function fetchy(gen){
 	return data
 }
 
-async function studentBuilder(gen){//main function
-	var allStudents = await fetchy(gen)
+async function studentBuilder(){//main function
+	
 	allStudents.forEach((element)=>{
 		var fras = "";
 		if(element.frase.length <= 10){
@@ -67,3 +70,15 @@ document.getElementById("PBB").addEventListener('click', ()=>{
 })
 
 //---------------------------search engine -----------------------
+
+async function searchEngine (toSearch, gen ){
+
+	allStudents.forEach(element => { 
+		if (toSearch in element.nombrecompleto){
+
+			document.getElementById("Images").innerHTML = "";
+		}
+		
+	});
+}
+

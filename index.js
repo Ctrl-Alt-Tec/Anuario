@@ -14,6 +14,8 @@ async function fetchy(gen){
 async function studentBuilder(gen, searchBar = null){//main function
 	const allStudents = await fetchy(gen)
 	allStudents.forEach((element)=>{
+		console.log(element.nombrecompleto, typeof element.frase)
+		element.frase = element.frase.toString()
 		var fras = "";
 		var workingFras = element.frase;
 		while (element.nombrecompleto.indexOf(".")>=0){
@@ -40,6 +42,8 @@ async function studentBuilder(gen, searchBar = null){//main function
                 </div>
             </a>`
 	})
+	document.getElementById("load").innerHTML = ""
+	window.sessionStorage.setItem("alreadyLoaded",true);
 }
 
 

@@ -44,7 +44,7 @@
         <div class="buttons" id="DEV"><b>DEV</b></div>
         
     </div>
-
+    <h3 id="load" style="text-align: center">Cargando...</h3>
     <div id="images" style="justify-content: center"></div>
 
     <footer style="font-size: 1rem; color: rgb(100, 100, 100); text-align: center;">
@@ -55,6 +55,8 @@
 
     <script src="./index.js"></script>
 	<script defer>
+        window.sessionStorage;
+        window.sessionStorage.setItem("alreadyLoaded", false);
 		// :D
         /* TEMPLATE
 		function imgLoad(){
@@ -68,7 +70,7 @@
 			}
 		}
         imgLoad()*/
-        studentBuilder("ago2020")
+        studentBuilder("ago2020");
 	</script>
     <footer class="footer" id='footer'>
     </footer>

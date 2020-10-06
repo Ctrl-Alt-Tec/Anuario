@@ -16,7 +16,7 @@ async function studentBuilder(gen, searchProg = "none", searchBar = ""){//main f
 
 	window.sessionStorage.setItem("envirnonment",gen);
 
-	if(searchBar != "" || window.sessionStorage.getItem("imagesFull") == null || searchProg != "none"){
+	if(searchBar != "" || window.sessionStorage.getItem("imagesFull") == null || (searchProg != "none" && window.sessionStorage.getItem(searchProg) == null )){
 		if(window.sessionStorage.getItem("allStudents") == null){
 			var allStudents = await fetchy(gen)
 		}else{
@@ -58,7 +58,11 @@ async function studentBuilder(gen, searchProg = "none", searchBar = ""){//main f
 			jsonAllStudents = await JSON.stringify(allStudents);
 		    window.sessionStorage.setItem("allStudents",jsonAllStudents);
 		    window.sessionStorage.setItem("imagesFull",document.getElementById("images").innerHTML);
+		}else{
+			window.sessionStorage.setItem(searchProg,document.getElementById("images").innerHTML);
 		}
+	}else if(searchProg != "none" && window.sessionStorage.getItem(searchProg) != null){
+		document.getElementById("images").innerHTML = window.sessionStorage.getItem(searchProg);
 	}else{
 		document.getElementById("images").innerHTML = window.sessionStorage.getItem("imagesFull");
 	}

@@ -55,8 +55,6 @@
 
     <script src="./index.js"></script>
 	<script defer>
-        window.sessionStorage;
-        window.sessionStorage.setItem("alreadyLoaded", false);
 		// :D
         /* TEMPLATE
 		function imgLoad(){
@@ -70,7 +68,12 @@
 			}
 		}
         imgLoad()*/
-        studentBuilder("ago2020");
+        async function main(){
+            await studentBuilder("ago2020");
+            console.log("allez gut")
+            console.log(window.sessionStorage.getItem("allStudents"))
+        }
+        main()
 	</script>
     <footer class="footer" id='footer'>
     </footer>

@@ -38,6 +38,7 @@
     </div><br/>
     <h3 style="text-align: center; font-family: 'Merriweather Sans', sans-serif;">Filtro:</h3>
     <div style="display: flex; justify-content: center;">
+        <div class="buttons" id="nofilter"><b>Todos</b></div>
         <div class="buttons" id="PBB"><b>PBB</b></div>
         <div class="buttons" id="PTM"><b>PTM</b></div>
         <div class="buttons" id="PBI"><b>PBI</b></div>
@@ -70,7 +71,6 @@
         imgLoad()*/
         async function main(){
             await studentBuilder("ago2020");
-            console.log("allez gut")
             console.log(window.sessionStorage.getItem("allStudents"))
         }
         main()

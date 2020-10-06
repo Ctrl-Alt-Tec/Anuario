@@ -194,6 +194,7 @@ div.buttons{
     text-decoration: none;
     color: inherit;
     transition: transform 0.2s;
+    background: white;
 }
 
 div.buttons:hover{
@@ -201,6 +202,7 @@ div.buttons:hover{
     color: #0000ff;
     transform: scale(1.5);
     transition: transform 0.4s;
+    background: white;
 }
 
 @media only screen and (max-width: 900px){

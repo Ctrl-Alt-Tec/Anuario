@@ -1,6 +1,5 @@
 //-------------Variables Globales------------------
 window.sessionStorage;
-
 //-------------Main------------------
 
 async function fetchy(gen){
@@ -11,8 +10,13 @@ async function fetchy(gen){
 	return data
 }
 
-async function studentBuilder(gen, searchBar = null){//main function
-	if(searchBar != null){
+async function studentBuilder(gen, searchProg = "none", searchBar = ""){//main function
+	document.getElementById("load").innerHTML="Cargando..."
+	document.getElementById("images").innerHTML="";
+
+	window.sessionStorage.setItem("envirnonment",gen);
+
+	if(searchBar != "" || window.sessionStorage.getItem("imagesFull") == null || searchProg != "none"){
 		if(window.sessionStorage.getItem("allStudents") == null){
 			var allStudents = await fetchy(gen)
 		}else{
@@ -20,43 +24,46 @@ async function studentBuilder(gen, searchBar = null){//main function
 			allStudents = await JSON.parse(allStudents)
 		}
 		allStudents.forEach((element)=>{
-			console.log(element.nombrecompleto, typeof element.frase)
-			element.frase = element.frase.toString()
-			var fras = "";
-			var workingFras = element.frase;
-			while (element.nombrecompleto.indexOf(".")>=0){
-				element.nombrecompleto = element.nombrecompleto.replace("."," ")
-			}
-			if(element.frase.length <= 10){
-				fras += "<br/>"
-			}else if(element.frase.length >=100){
-				let ind = element.frase.indexOf(" ",80)
-				workingFras = element.frase.slice(0,ind)
-				workingFras += " [...]"
-			}
-			if(element.frase.indexOf('"')>=0){
-				fras += `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.7rem; width: 100%;">${workingFras}</h4>`
-			}else{
-				fras += `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.8rem; width: 100%;">"${workingFras}"</h4>`
-			}
-			document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
-	                <div class="genCard" style="height: 370px;">
-	                    <image width="180px" height="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
-	                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1.2rem;">${element.nombrecompleto}</h3>
-	                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1rem;">${element.programa}</h3>
-	                    ${fras}
-	                </div>
-	            </a>`
+			if(element.programa.indexOf(searchProg)>=0 || searchProg == "none"){
+				console.log(element.nombrecompleto, typeof element.frase, element.programa)
+				element.frase = element.frase.toString()
+				var fras = "";
+				var workingFras = element.frase;
+				while (element.nombrecompleto.indexOf(".")>=0){
+					element.nombrecompleto = element.nombrecompleto.replace("."," ")
+				}
+				if(element.frase.length <= 10){
+					fras += "<br/>"
+				}else if(element.frase.length >=100){
+					let ind = element.frase.indexOf(" ",80)
+					workingFras = element.frase.slice(0,ind)
+					workingFras += " [...]"
+				}
+				if(element.frase.indexOf('"')>=0){
+					fras += `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.7rem; width: 100%;">${workingFras}</h4>`
+				}else{
+					fras += `<h4 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 0.8rem; width: 100%;">"${workingFras}"</h4>`
+				}
+				document.getElementById("images").innerHTML += `<a href="http://stemen.com" target="_blank" style="text-decoration: none;">
+		                <div class="genCard" style="height: 370px;">
+		                    <image width="180px" height="180px" src="${element.fotoURL}" style="border-radius: 1.5rem; "/>
+		                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1.2rem;">${element.nombrecompleto}</h3>
+		                    <h3 style="text-align: center; color: black; font-family: 'Merriweather Sans', sans-serif; font-size: 1rem;">${element.programa}</h3>
+		                    ${fras}
+		                </div>
+		            </a>`
+		    }
 		})
-		jsonAllStudents = await JSON.stringify(allStudents);
-	    window.sessionStorage.setItem("allStudents",jsonAllStudents);
-	    window.sessionStorage.setItem("imagesFull",document.getElementById("images").innerHTML);
+		if(window.sessionStorage.getItem("allStudents")==null){
+			jsonAllStudents = await JSON.stringify(allStudents);
+		    window.sessionStorage.setItem("allStudents",jsonAllStudents);
+		    window.sessionStorage.setItem("imagesFull",document.getElementById("images").innerHTML);
+		}
 	}else{
 		document.getElementById("images").innerHTML = window.sessionStorage.getItem("imagesFull");
 	}
 	document.getElementById("load").innerHTML = ""
 }
-
 
 //-----------------------top bar animation------------------------
 window.onscroll = function(){menuScroll()}
@@ -85,20 +92,36 @@ function menuScroll(){
 	}
 }
 
-document.getElementById("PBB").addEventListener('click', ()=>{
+//-----------------------Filters----------------------------------
 
+async function clearFilters(){
+	var standardStyle = "max-width: 50px;max-height: 50px;width: 100%;padding: 1rem;margin: 1rem;border: 0.15rem solid rgb(200,200,200);border-radius: 1rem;display: flex;justify-content: center;align-items: stretch;flex-wrap: wrap;text-decoration: none;color: inherit;transition: transform 0.2s;background: white;"
+	document.getElementById("PBB").style = standardStyle;
+	document.getElementById("PTM").style = standardStyle;
+	document.getElementById("PBI").style = standardStyle;
+}
+
+document.getElementById("PBB").addEventListener('click', ()=>{
+	clearFilters()
+	studentBuilder(window.sessionStorage.getItem("envirnonment"),"PBB")
+	document.getElementById("PBB").style = "color: #0000ff; transform: scale(1.5);"
 })
 
-document.getElementById("PBB").addEventListener('click', ()=>{
-	
+document.getElementById("PTM").addEventListener('click', ()=>{
+	clearFilters()
+	studentBuilder(window.sessionStorage.getItem("envirnonment"),"PTM")
+	document.getElementById("PTM").style = "color: #0000ff; transform: scale(1.5);"
 })
 
-document.getElementById("PBB").addEventListener('click', ()=>{
-	
+document.getElementById("PBI").addEventListener('click', ()=>{
+	clearFilters()
+	studentBuilder(window.sessionStorage.getItem("envirnonment"),"PBI")
+	document.getElementById("PBI").style = "color: #0000ff; transform: scale(1.5);"
 })
 
-document.getElementById("PBB").addEventListener('click', ()=>{
-	
+document.getElementById("nofilter").addEventListener('click', ()=>{
+	clearFilters()
+	studentBuilder(window.sessionStorage.getItem("envirnonment"),"none")
 })
 
 //---------------------------search engine -----------------------
